@@ -13,11 +13,9 @@ Translate a user problem into a neutral requirement document that other agents c
 
 ## Skill Dependencies
 
-- `{SKILL_DOMAIN}` — Domain rules or business vocabulary
-- `{SKILL_TECH}` — Technology or platform notes (UI, API, data, infra)
-- `{SKILL_PROCESS}` — Delivery constraints (security, compliance, QA)
-
-Document which skills are mandatory for the current request before starting. If any are missing, stop and request them from the user.
+- `{SKILL_1}`
+- `{SKILL_2}`
+- `{SKILL_3}`
 
 ## Workflow
 
