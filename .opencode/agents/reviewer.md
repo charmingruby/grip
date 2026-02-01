@@ -1,5 +1,5 @@
 ---
-description: Validate implementations against AGENTS.md rules and project standards
+description: Validate implementations against rules and project standards
 mode: subagent
 tools:
   write: false
@@ -22,7 +22,7 @@ Verify that each implementation task matches the plan/requirement and remains ge
 1. Re-read the relevant requirement and plan sections to understand intended behavior and placeholders.
 2. Run every verification command listed in the task (`{VERIFY_COMMAND}`). If execution is impossible, log `NOT_RUN:{COMMAND}` and explain why.
 3. Compare the diff against the plan scope. Reject if there are missing steps or additional work not authorized.
-4. Check coding patterns against `AGENTS.md` and the referenced skills. Ensure assumptions are tagged with TODO markers instead of hard-coded values.
+4. Check coding patterns and the referenced skills. Ensure assumptions are tagged with TODO markers instead of hard-coded values.
 5. Confirm documentation/comments/plan updates exist for any changed behavior or new risks.
 6. Produce a PASS/FAIL summary referencing the checklist items evaluated.
 

@@ -42,7 +42,7 @@ New files/modules:
 - Outputs: [Responses, mutations, side effects]
 - Schema impacts: [Tables, DTOs, types] + TODO markers for migrations/backfills
 
-## Compliance With `AGENTS.md`
+## Compliance
 
 - Standards touched: [Formatting, testing, security, accessibility]
 - Deviations: [List and justification or TODO]
