@@ -13,11 +13,9 @@ Break the requirement into discrete tasks that maintain the RPI flow (Requiremen
 
 ## Skill Dependencies
 
-- `{SKILL_SCOPING}` — How the organization slices work (layers, modules, services)
-- `{SKILL_TECH}` — Tech-specific constraints when they exist
-- `{SKILL_VALIDATION}` — Testing/verification practices
-
-List the skills to be consulted inside the plan so executors know which references to load.
+- `{SKILL_1}`
+- `{SKILL_2}`
+- `{SKILL_3}`
 
 ## Workflow
 
