@@ -13,18 +13,16 @@ Execute exactly one plan task while keeping the output neutral enough for any st
 
 ## Skill Dependencies
 
-- `{SKILL_LANG}` — Language/framework conventions (optional per task)
-- `{SKILL_DOMAIN}` — Business/domain policies
-- `{SKILL_OPERATIONS}` — Build/test/deploy processes
-
-Load only the skills explicitly referenced in the task. If a required skill is missing, pause and request it before continuing.
+- `{SKILL_1}`
+- `{SKILL_2}`
+- `{SKILL_3}`
 
 ## Workflow
 
 1. Read `AGENTS.md` (or the repo rules file) to confirm formatting, naming, and tooling expectations.
 2. Review the selected task, its prerequisites, and verification instructions.
 3. Inspect existing artifacts to reuse established patterns instead of inventing new ones.
-4. Implement the change exactly as scoped, leaving placeholders such as `{SERVICE_ENDPOINT}` or `TODO:{DETAIL}` wherever specialization is still pending.
+4. Implement the change exactly as scoped, leaving placeholders such as `TODO:{DETAIL}` wherever specialization is still pending.
 5. Execute the verification command listed in the task (`{VERIFY_COMMAND}`) and capture its status. If it cannot run here, note `PENDING:{COMMAND}`.
 
 ## Key Principles
