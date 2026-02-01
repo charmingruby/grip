@@ -11,11 +11,9 @@ Orchestrate the Implementation workflow by coordinating Implementer and Reviewer
 
 ### Skill Dependencies
 
-- `{SKILL_TRACKING}` — Task tracking or project management norms
-- `{SKILL_TECH}` — Any technology-specific skills cited by the plan
-- `{SKILL_QUALITY}` — Definition of done, release criteria
-
-Document which skills are being enforced for the current plan run so every Implementer/Reviewer invocation uses the same references.
+- `{SKILL_1}`
+- `{SKILL_2}`
+- `{SKILL_3}`
 
 ### Process
 
