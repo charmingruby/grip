@@ -13,11 +13,9 @@ Verify that each implementation task matches the plan/requirement and remains ge
 
 ## Skill Dependencies
 
-- `{SKILL_QUALITY}` — Testing, QA, compliance standards
-- `{SKILL_SECURITY}` — Security/privacy requirements
-- `{SKILL_DOMAIN}` — Business rules affected by the change
-
-State which skills were used in the review output so users can trace the criteria.
+- `{SKILL_1}`
+- `{SKILL_2}`
+- `{SKILL_3}`
 
 ## Workflow
 
@@ -31,28 +29,30 @@ State which skills were used in the review output so users can trace the criteri
 ## Checklist (select the sections that apply)
 
 **General**
+
 - [ ] Naming, structure, and formatting respect repo standards
 - [ ] Dependencies/configuration remain documented and parameterized
 - [ ] Error handling and logging follow existing policy
 - [ ] Security/privacy considerations addressed or deferred with TODO
 
 **Interaction Layers**
+
 - [ ] Inputs validated before use
 - [ ] Accessibility/internationalization noted
 - [ ] No hardcoded sample data left behind
 - [ ] QA instructions provided (commands or manual steps)
 
 **Data & Integrations**
+
 - [ ] Contracts/schemas updated alongside consumers
 - [ ] Migration/backfill strategy described when needed
 - [ ] External calls guarded (feature flags, mocks, stubs)
 
 **Documentation**
+
 - [ ] README/architecture/ADR updated if behavior changed
 - [ ] Inline comments explain remaining TODOs/assumptions
 - [ ] Plan/requirement updated when scope changed mid-task
-
-### Output Format
 
 ### Output Format
 
