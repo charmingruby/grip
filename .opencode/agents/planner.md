@@ -1,5 +1,5 @@
 ---
-description: Transform designs into atomic, testable implementation tasks
+description: Convert a requirement document into atomic, testable plan tasks
 mode: primary
 tools:
   write: true
@@ -9,28 +9,35 @@ tools:
 
 ## Role
 
-Break the requirement into discrete tasks that maintain the RPI flow (Requirement → Plan → Implementation) while remaining technology-agnostic.
+Transform a requirement doc into a linear plan of small, testable tasks.
 
-## Skill Dependencies
+## Inputs
 
-- `{SKILL_1}`
-- `{SKILL_2}`
-- `{SKILL_3}`
+- Requirement path: {REQUIREMENT_PATH}
+- Topic: {TOPIC}
+- Date: {DATE}
+- Applicable skills: [{SKILLS}] (optional)
+- Applicable commands: [{NAME}{USE}] (optional)
 
-## Workflow
+## Contract
 
-1. Read the requirement and copy every placeholder or TODO that must persist.
-2. Define tasks where each outcome is independently testable and references a single logical area (`{LAYER}`, `{MODULE}`, `{INTERFACE}`).
-3. For every task, specify:
-   - **Goal**: neutral description of the behavior
-   - **Touchpoints**: directories/files expressed as `{PATH_PLACEHOLDER}`
-   - **Verification**: command or manual check expressed as `{VERIFY_STEP}`
-   - **Inputs**: configs, credentials, or decisions still pending
-4. Arrange the tasks from foundational changes to integration/polish and describe dependency chains explicitly.
-5. Provide rollback notes that reference flags or reversion steps without binding to a specific tool.
+- Preserve all placeholders and TODO markers from the requirement.
+- Tasks must be atomic, testable, and scoped to a single concern.
+- Each task must define: Goal, Files, Verify, Dependencies (if any), Rollback note.
 
-## Deliverable
+## Process
 
-- File: `memory/plans/{DATE}-{TOPIC}.md`
+1. Read requirement and extract scope, constraints, TODOs, and contracts.
+2. Create tasks ordered: foundations → integration → polish.
+3. For each task, define:
+   - Goal (behavior-focused)
+   - Files (explicit paths or {PATH_PLACEHOLDER})
+   - Verify (explicit command or {VERIFY_STEP})
+   - Dependencies (task ids, if any)
+   - Rollback (what to revert / safety note)
+   - Notes (open decisions, preserved TODOs)
+
+## Output
+
+- Path: `memory/plans/{DATE}-{TOPIC}.md`
 - Template: `.opencode/templates/plan-template.md`
-- Must enumerate tasks, dependencies, verification strategy, and rollback guidance, all with neutral placeholders for later specialization.

@@ -1,22 +1,112 @@
 # Mandatory Overrides
 
-This list covers only what must be overwritten when you bring the workflow into another repository.
+**Step-by-step adaptation guide**
 
-## agents/\*
+Follow the steps below when bringing this workflow into another repository.
+Only the items listed here must be changed.
 
-- `Skill Dependencies` (all agents): replace `{SKILL_N}` with the actual competencies used in the project.
-- `Workflow` instructions that reference files or commands: point to the real names (e.g., if `AGENTS.md` does not exist, name the correct doc; if the command is `make test`, replace `{VERIFY_COMMAND}`).
-- `Deliverable`/`Output` sections referencing paths: ensure they target `memory/requirements/...` and `memory/plans/...`, creating those folders when needed.
+---
 
-## templates/plan-template.md
+## Step 1 — Review agent skills
 
-- “Tasks” section: replace `{PATH_PLACEHOLDER}` and `{COMMAND}` with repository-specific examples (at minimum specify the base directory and the default verification command).
+**Where:** `agents/*`
 
-## templates/requirement-template.md
+1. Locate the `Skills` (or `Skill Dependencies`) section in agents that **execute or review code**.
+2. Replace `{SKILL_N}` with the actual competencies used in the project.
 
-- Header (Owner/Status): align with the local approval flow.
-- “Scope of Changes” section: replace `{PROJECT_PATH}`/`{PACKAGE}` with the actual modules or directories your team references.
+Examples:
 
-## Referenced structure
+```md
+- Applicable skills:
+  - `ui-system`
+  - `sveltekit-conventions`
+```
 
-- Always create `memory/requirements` and `memory/plans` in the destination repository; these paths are fixed for the workflow and must not be renamed.
+**Rules:**
+
+- Do **not** hardcode skills as always-on.
+- Skills must remain **declarative**.
+- Plans and tasks decide **when** a skill applies.
+
+---
+
+## Step 2 — Define reusable commands
+
+**Where:** `.opencode/commands/*`
+
+1. Create reusable command definitions for the repository (e.g. `quality-gate`).
+2. Each command must describe **how to run** validation without exposing details to agents.
+
+Example:
+
+```md
+.opencode/commands/quality-gate.md
+```
+
+3. In agents, replace `{COMMAND_N}` with these reusable command names.
+
+---
+
+## Step 3 — Update workflow references
+
+**Where:** `agents/*`
+
+1. Review `Workflow` instructions that reference another files.
+2. Point them to the **actual names used in the repository**.
+3. Do not introduce stack-specific logic inside the agent.
+
+---
+
+## Step 4 — Normalize verification behavior
+
+**Where:** `agents/*`, plans, and tasks
+
+1. **Do not** hardcode commands like `npm run ...` inside agents.
+2. Use generic references instead:
+
+```md
+- Applicable commands:
+  - command: quality-gate
+```
+
+3. Commands must be resolved via:
+
+```
+.opencode/commands/{NAME}.md
+```
+
+4. If no verification is explicitly specified:
+   - Default to `command: quality-gate` when available.
+
+---
+
+## Step 5 — Confirm output paths
+
+**Where:** `agents/*`, templates
+
+1. Ensure all `Deliverable` / `Output` paths point to:
+   - `memory/requirements/...`
+   - `memory/plans/...`
+
+2. Create these folders in the destination repository if they do not exist.
+3. These paths are **fixed** and must not be renamed.
+
+---
+
+## Step 6 — Final sanity check
+
+Before using the workflow:
+
+- [ ] Skills are declared, not assumed
+- [ ] Commands are generic and reusable
+- [ ] Agents contain no stack-specific execution logic
+- [ ] `quality-gate` exists and runs successfully
+- [ ] `memory/requirements` and `memory/plans` are present
+
+---
+
+### Design principle (do not change)
+
+> **Agents execute contracts.
+> Skills define how to think.
+> Commands define how to run.**
