@@ -15,7 +15,7 @@ Validate that task {TASK_ID} was implemented according to the plan and standards
 
 - Plan path: {PLAN_PATH}
 - Task ID: {TASK_ID}
-- Applicable skills: {SKILLS} (optional)
+- Applicable skills: [{SKILLS}] (optional)
 - Applicable commands:
   - quality-gate: default verification
 

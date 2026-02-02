@@ -16,6 +16,7 @@ Transform a requirement doc into a linear plan of small, testable tasks.
 - Requirement path: {REQUIREMENT_PATH}
 - Topic: {TOPIC}
 - Date: {DATE}
+- Applicable skills: [{SKILLS}] (optional)
 - Applicable commands: [{NAME}{USE}] (optional)
 
 ## Contract

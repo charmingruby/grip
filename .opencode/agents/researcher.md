@@ -17,6 +17,7 @@ Translate a user problem into a vendor-agnostic requirement document.
 - Repo context (optional): {REPO_CONTEXT}
 - Topic: {TOPIC}
 - Date: {DATE}
+- Applicable skills: [{SKILLS}] (optional)
 - Applicable commands: [{NAME}{USE}] (optional)
 
 ## Contract

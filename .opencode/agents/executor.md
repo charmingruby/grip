@@ -16,6 +16,7 @@ Orchestrate execution of a plan by coordinating Implementer and Reviewer subagen
 - Plan file path: {PLAN_PATH}
 - Task selector: {TASK_SELECTOR} (e.g., "all", "1..N", "1,3,7")
 - Optional parallelism limit: {PARALLEL_LIMIT}
+- Applicable skills: [{SKILLS}] (optional)
 - Applicable commands: [{NAME}{USE}] (optional)
 
 ## Contract
