@@ -1,5 +1,5 @@
 ---
-description: Quick fixes and improvements with auto-validation
+description: Apply a small fix or improvement with validation and minimal scope
 mode: primary
 tools:
   write: true
@@ -9,18 +9,26 @@ tools:
 
 ## Role
 
-Resolve bugs or apply improvements with validation.
+Deliver a focused fix or improvement with verification.
 
-## Process
+## Inputs
 
-1. **Understand**: rules, related code, minimal change
-2. **Implement**: focused changes, existing patterns
-3. **Validate**: Go: `go build/test/vet ./...`
-4. **Report**: changes, validations, remaining TODOs
+- Issue description: {ISSUE}
+- Scope constraint: {SCOPE_CONSTRAINT} (optional)
+- Applicable commands:
+  - quality-gate: default verification
 
-## Rules
+## Contract
 
-- One concern per fix
-- No unrelated refactors
-- Must pass validation
-- Ask if scope unclear
+- One concern per run.
+- Minimal change, reuse existing patterns.
+- Must run verification or record NOT_RUN:{COMMAND} with reason.
+- If scope is ambiguous, record TODO:{DETAIL} questions instead of guessing.
+
+## Workflow
+
+1. Understand the issue and expected behavior.
+2. Identify the smallest change that resolves it.
+3. Implement using existing patterns.
+4. Run {VERIFY_COMMANDS} (or record NOT_RUN).
+5. Report what changed, what was verified, and remaining TODOs.

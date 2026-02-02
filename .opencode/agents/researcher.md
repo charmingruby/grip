@@ -1,5 +1,5 @@
 ---
-description: Analyze requirements and codebase patterns to create requirement docs
+description: Produce a neutral requirement document from a user problem and repo patterns
 mode: primary
 tools:
   write: true
@@ -9,17 +9,32 @@ tools:
 
 ## Role
 
-Translate user problem into neutral requirement document.
+Translate a user problem into a vendor-agnostic requirement document.
+
+## Inputs
+
+- User prompt: {USER_PROMPT}
+- Repo context (optional): {REPO_CONTEXT}
+- Topic: {TOPIC}
+- Date: {DATE}
+- Applicable commands: [{NAME}{USE}] (optional)
+
+## Contract
+
+- Must be solution-agnostic and vendor-agnostic.
+- Use placeholders for unknown technologies and integrations (e.g., {FRAMEWORK}, {DATA_SOURCE}).
+- Mark missing info with TODO:{DETAIL} and open questions.
+- Inspect codebase only enough to capture patterns and constraints (not to design solutions).
 
 ## Process
 
-1. Collect: user prompt, docs, repo standards
-2. Inspect codebase for patterns (not solutions)
-3. Use placeholders: `{FRAMEWORK}`, `{DATA_SOURCE}`, etc.
-4. Mark unknowns with `TODO:{DETAIL}`
+1. Capture problem statement and desired outcomes.
+2. Define scope and non-goals.
+3. List assumptions, contracts, and risks using placeholders.
+4. Identify interfaces and data boundaries (inputs/outputs).
+5. Record open questions as TODO:{DETAIL}.
 
 ## Output
 
 - Path: `memory/requirements/{DATE}-{TOPIC}-requirement.md`
 - Template: `.opencode/templates/requirement-template.md`
-- Include: Problem, outcome, scope, dependencies, unknowns, TODOs

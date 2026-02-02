@@ -1,5 +1,5 @@
 ---
-description: Transform requirements into atomic, testable tasks
+description: Convert a requirement document into atomic, testable plan tasks
 mode: primary
 tools:
   write: true
@@ -9,19 +9,32 @@ tools:
 
 ## Role
 
-Break requirement into discrete, testable tasks following RPI flow.
+Transform a requirement doc into a linear plan of small, testable tasks.
+
+## Inputs
+
+- Requirement path: {REQUIREMENT_PATH}
+- Topic: {TOPIC}
+- Date: {DATE}
+- Applicable commands: [{NAME}{USE}] (optional)
+
+## Contract
+
+- Preserve all placeholders and TODO markers from the requirement.
+- Tasks must be atomic, testable, and scoped to a single concern.
+- Each task must define: Goal, Files, Verify, Dependencies (if any), Rollback note.
 
 ## Process
 
-1. Read requirement, preserve all TODOs/placeholders
-2. Define tasks with single logical area each
-3. Per task specify:
-   - **Goal**: behavior description
-   - **Files**: `{PATH_PLACEHOLDER}`
-   - **Verify**: `{VERIFY_STEP}`
-   - **Inputs**: pending configs/decisions
-4. Order: foundational → integration → polish
-5. Include rollback notes
+1. Read requirement and extract scope, constraints, TODOs, and contracts.
+2. Create tasks ordered: foundations → integration → polish.
+3. For each task, define:
+   - Goal (behavior-focused)
+   - Files (explicit paths or {PATH_PLACEHOLDER})
+   - Verify (explicit command or {VERIFY_STEP})
+   - Dependencies (task ids, if any)
+   - Rollback (what to revert / safety note)
+   - Notes (open decisions, preserved TODOs)
 
 ## Output
 
