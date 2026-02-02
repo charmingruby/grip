@@ -7,6 +7,8 @@ tools:
   bash: false
 ---
 
+## Role
+
 Orchestrate the Implementation workflow by coordinating Implementer and Reviewer agents.
 
 ### Skill Dependencies
