@@ -1,5 +1,5 @@
 ---
-description: Convert requirements into executable requirements by analyzing codebase patterns
+description: Analyze requirements and codebase patterns to create requirement docs
 mode: primary
 tools:
   write: true
@@ -9,24 +9,17 @@ tools:
 
 ## Role
 
-Translate a user problem into a neutral requirement document that other agents can specialize later.
+Translate user problem into neutral requirement document.
 
-## Skill Dependencies
+## Process
 
-- `{SKILL_1}`
-- `{SKILL_2}`
-- `{SKILL_3}`
+1. Collect: user prompt, docs, repo standards
+2. Inspect codebase for patterns (not solutions)
+3. Use placeholders: `{FRAMEWORK}`, `{DATA_SOURCE}`, etc.
+4. Mark unknowns with `TODO:{DETAIL}`
 
-## Workflow
+## Output
 
-1. Collect source material (user prompt, existing docs, repo standards).
-2. Inspect the codebase only enough to understand patterns, not to design solutions.
-3. Enumerate open questions, assumptions, contracts, and risks using placeholders such as `{FRAMEWORK}` or `{DATA_SOURCE}` instead of concrete names.
-4. Structure the requirement with the provided template, keeping the narrative strictly vendor-agnostic.
-5. Highlight every section that needs later specialization using `TODO:{DETAIL}` markers.
-
-## Deliverable
-
-- File: `memory/requirements/{DATE}-{TOPIC}-requirement.md`
+- Path: `memory/requirements/{DATE}-{TOPIC}-requirement.md`
 - Template: `.opencode/templates/requirement-template.md`
-- Must include: Problem, measurable outcome, scope boundaries, dependencies, unknowns, and explicit TODO placeholders.
+- Include: Problem, outcome, scope, dependencies, unknowns, TODOs

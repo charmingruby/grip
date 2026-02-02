@@ -1,61 +1,48 @@
 # Requirement: {Topic}
 
-Date: YYYY-MM-DD
-Status: READY_FOR_PLAN
-Owner: Researcher
-
-> **How to use**: Keep placeholders (e.g., `{FRAMEWORK}`, `{API_NAME}`) so this document can be cloned for any repo. Replace them only when you specialize for a concrete project.
+Date: YYYY-MM-DD | Status: READY_FOR_PLAN | Owner: Researcher
 
 ## Problem
 
-- User Story: ["As a ... I need ..."]
-- Desired Outcome: [Business/UX impact]
-- Success Metric: [Quantifiable or observable]
+- **User Story**: As a ... I need ...
+- **Outcome**: [Business/UX impact]
+- **Success Metric**: [Quantifiable]
 
-## Solution Overview
+## Solution
 
-- Key Idea: [One-paragraph summary]
-- System Boundary: [Service/app affected]
-- Assumptions to Validate: [Unknowns or decisions the user must confirm]
+- **Approach**: [One-paragraph summary]
+- **Boundary**: [Service/app affected]
+- **Assumptions**: [To validate with user]
 
-## Scope of Changes
+## Scope
 
-Files/modules to modify (use placeholders where needed):
+**Modify:**
+- `{PATH}` — reason
 
-- `{PROJECT_PATH}/...` — Reason/behavior change
-- `{PACKAGE}/...` — Reason
+**Create:**
+- `{NEW_FILE}` — purpose
 
-New files/modules:
+## References
 
-- `{NEW_FILE}` — Purpose
+- Similar: [path/link]
+- Reusable: [utilities/components]
+- External: [APIs, feature flags]
 
-## Existing References
+## Data Flow
 
-- Similar pattern: [Link/path]
-- Reusable utilities/components: [List]
-- External dependencies: [API, queue, storage, feature flag]
+- **In**: [events, requests]
+- **Process**: [logic location]
+- **Out**: [responses, mutations]
+- **Schema**: [impacts + TODO markers]
 
-## Data Flow / Contracts
+## Risks & Edge Cases
 
-- Inputs: [Events, requests, commands]
-- Processing: [Where logic lives]
-- Outputs: [Responses, mutations, side effects]
-- Schema impacts: [Tables, DTOs, types] + TODO markers for migrations/backfills
-
-## Compliance
-
-- Standards touched: [Formatting, testing, security, accessibility]
-- Deviations: [List and justification or TODO]
-
-## Edge Cases & Risks
-
-- [Scenario → Mitigation]
-- [Scenario → Mitigation]
+- [Scenario] → [Mitigation]
 
 ## Out of Scope
 
-- [Explicit exclusions to avoid scope creep]
+- [Explicit exclusions]
 
 ## Open Questions
 
-- [What still needs confirmation before implementation]
+- [Needs confirmation]

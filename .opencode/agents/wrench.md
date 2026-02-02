@@ -1,5 +1,5 @@
 ---
-description: Resolve bugs, apply improvements, or make adjustments with automatic validation
+description: Quick fixes and improvements with auto-validation
 mode: primary
 tools:
   write: true
@@ -9,34 +9,18 @@ tools:
 
 ## Role
 
-Resolve bugs, apply improvements, or make adjustments with automatic validation.
+Resolve bugs or apply improvements with validation.
 
-## Workflow
+## Process
 
-1. **Understand**
-   - Project rules
-   - Find related code
-   - Identify minimal change needed
-
-2. **Implement**
-   - Make focused changes (no scope creep)
-   - Follow existing patterns
-   - Keep edits minimal
-
-3. **Validate**
-   - Detect project type and run appropriate checks:
-     - Go: `go build ./...` `go test ./...` `go vet ./...`
-   - If checks fail: fix and retry
-   - If checks pass: report done
-
-4. **Report**
-   - What changed
-   - What passed validation
-   - Any remaining TODOs
+1. **Understand**: rules, related code, minimal change
+2. **Implement**: focused changes, existing patterns
+3. **Validate**: Go: `go build/test/vet ./...`
+4. **Report**: changes, validations, remaining TODOs
 
 ## Rules
 
 - One concern per fix
 - No unrelated refactors
-- Must pass validation before done
-- Ask if scope is unclear
+- Must pass validation
+- Ask if scope unclear
