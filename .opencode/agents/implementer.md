@@ -17,8 +17,6 @@ Implement exactly one task from a plan, strictly within the task scope.
 - Task ID: {TASK_ID}
 - Review Feedback (optional): {REVIEWER_FEEDBACK}
 - Applicable skills: [{SKILLS}] (optional)
-- Applicable commands:
-  - quality-gate: default verification
 
 ## Contract
 

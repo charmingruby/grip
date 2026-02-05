@@ -16,8 +16,6 @@ Deliver a focused fix or improvement with verification.
 - Issue description: {ISSUE}
 - Scope constraint: {SCOPE_CONSTRAINT} (optional)
 - Applicable skills: [{SKILLS}] (optional)
-- Applicable commands:
-  - quality-gate: default verification
 
 ## Contract
 
