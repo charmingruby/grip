@@ -30,24 +30,7 @@ Examples:
 
 ---
 
-## Step 2 — Define reusable commands
-
-**Where:** `.opencode/commands/*`
-
-1. Create reusable command definitions for the repository (e.g. `quality-gate`).
-2. Each command must describe **how to run** validation without exposing details to agents.
-
-Example:
-
-```md
-.opencode/commands/quality-gate.md
-```
-
-3. In agents, replace `{COMMAND_N}` with these reusable command names.
-
----
-
-## Step 3 — Update workflow references
+## Step 2 — Update workflow references
 
 **Where:** `agents/*`
 
@@ -57,30 +40,16 @@ Example:
 
 ---
 
-## Step 4 — Normalize verification behavior
+## Step 3 — Normalize verification behavior
 
 **Where:** `agents/*`, plans, and tasks
 
 1. **Do not** hardcode commands like `npm run ...` inside agents.
-2. Use generic references instead:
-
-```md
-- Applicable commands:
-  - command: quality-gate
-```
-
-3. Commands must be resolved via:
-
-```
-.opencode/commands/{NAME}.md
-```
-
-4. If no verification is explicitly specified:
-   - Default to `command: quality-gate` when available.
+2. Write common commands on `AGENTS.md`.
 
 ---
 
-## Step 5 — Confirm output paths
+## Step 4 — Confirm output paths
 
 **Where:** `agents/*`, templates
 
@@ -93,14 +62,14 @@ Example:
 
 ---
 
-## Step 6 — Final sanity check
+## Step 5 — Final sanity check
 
 Before using the workflow:
 
 - [ ] Skills are declared, not assumed
 - [ ] Commands are generic and reusable
 - [ ] Agents contain no stack-specific execution logic
-- [ ] `quality-gate` exists and runs successfully
+- [ ] Validation commands exists and runs successfully
 - [ ] `memory/requirements` and `memory/plans` are present
 
 ---
